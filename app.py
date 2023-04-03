@@ -34,6 +34,17 @@ def predict_api():
     print(output[0])
     return jsonify(output[0])
 
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = [x for x in request.form.values()]
+    column_names = [x for x in request.form.keys()]
+    processed_input = pipeline.transform(pd.DataFrame(np.array(list(data)).reshape(1,-1), columns=column_names))
+    print(processed_input)
+    output = rf_model.predict(processed_input)[0]
+    return render_template("home.html", prediction_text="The District House prediction Price is {}".format(output))
+    
+
+
 
 if __name__ == "__main__":
     app.run(debug = True)
