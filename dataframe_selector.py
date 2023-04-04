@@ -1,5 +1,6 @@
 import sklearn
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.preprocessing import OneHotEncoder
 
 class DataFrameSelector(BaseEstimator, TransformerMixin):
     def __init__(self,attribute_names,a,b):
