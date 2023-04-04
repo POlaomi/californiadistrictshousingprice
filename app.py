@@ -5,12 +5,12 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import sklearn
-from dataframe_selector import *
-from categorical_encoder import *
-from attributes_adder import *
+from dataframe_selector import DataFrameSelector
+from categorical_encoder import CategoricalEncoder
+from attributes_adder import AttributesAdder
 #from django.shortcuts import render
 
-#from sklearn.base import BaseEstimator, TransformerMixin 
+from sklearn.base import BaseEstimator, TransformerMixin 
 
     
 
