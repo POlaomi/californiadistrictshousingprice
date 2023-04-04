@@ -4,18 +4,10 @@ from flask import Flask, request, app, jsonify, url_for, render_template
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import sklearn
-from dataframe_selector import DataFrameSelector
-from categorical_encoder import CategoricalEncoder
-from attributes_adder import AttributesAdder
 from sklearn.preprocessing import OneHotEncoder
 #from django.shortcuts import render
 
 from sklearn.base import BaseEstimator, TransformerMixin 
-import __main__
-__main__.DataFrameSelector = DataFrameSelector
-__main__.CategoricalEncoder= CategoricalEncoder
-__main__.AttributesAdderr = AttributesAdder
 
     
 class AttributesAdder(BaseEstimator, TransformerMixin):
