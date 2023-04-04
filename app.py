@@ -8,7 +8,6 @@ from sklearn.preprocessing import OneHotEncoder
 #from django.shortcuts import render
 
 from sklearn.base import BaseEstimator, TransformerMixin 
-
     
 class AttributesAdder(BaseEstimator, TransformerMixin):
     def __init__(self,add_bedrooms_per_room=True):
@@ -39,7 +38,13 @@ class DataFrameSelector(BaseEstimator, TransformerMixin):
         return self
     def transform(self, X, y=None):
         return X[self.attribute_names].values
-    
+
+import __main__
+__main__.DataFrameSelector = DataFrameSelector
+__main__.CategoricalEncoder = CategoricalEncoder
+__main__.AttributesAdder = AttributesAdder
+
+
 #create an app
 app = Flask(__name__)
 #load the model
