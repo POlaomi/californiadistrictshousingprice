@@ -1,3 +1,4 @@
+import sklearn
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.preprocessing import OneHotEncoder
 
