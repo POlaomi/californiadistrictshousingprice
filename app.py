@@ -4,6 +4,7 @@ from flask import Flask, request, app, jsonify, url_for, render_template
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import sklearn
 from dataframe_selector import *
 from categorical_encoder import *
 from attributes_adder import *
@@ -48,7 +49,6 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug = True)
-
 
 
 
