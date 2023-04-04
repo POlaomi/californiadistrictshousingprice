@@ -11,6 +11,10 @@ from attributes_adder import AttributesAdder
 #from django.shortcuts import render
 
 from sklearn.base import BaseEstimator, TransformerMixin 
+import __main__
+__main__.DataFrameSelector = DataFrameSelector
+__main__.CategoricalEncoder= CategoricalEncoder
+__main__.AttributesAdderr = AttributesAdder
 
     
 
